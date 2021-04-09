@@ -1,0 +1,229 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>SPA</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
+  </head>
+  <body>
+      <h1 style="color:#301b3f;"><strong><em>MY PAGES</em></strong></h1>
+
+
+    <a style="color:#007580;" href="#/">Welcome</a>
+    <a style="color:#007580;" href="#/home">Home</a>
+    <a style="color:#007580;" href="#/register">Register</a>
+   
+    <script type="text/ng-template" id="pages/main.html">
+    
+      
+      <!DOCTYPE html>
+      <html lang="en" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <title>Home Page-Sonja</title>
+         
+        </head>
+        <header>
+          <div><em><strong><h2>Welcome </h2></strong></em></div>
+          <hr size="1"noshade>
+          </header>
+          <br>
+          <body ng-app="myApp" ng-controller="MainController"  >
+            <div style="background-image:url('main.jpg');" >
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <h2 style="text-align:center; color:white; font-size:56px;">HELLO</h2>
+              <h2 style="text-align:center; color:white; font-size:56px;">ALL</h2>
+            </div>
+          </body>
+      
+        
+      </html>
+    
+    </script>
+
+
+
+
+    <script type="text/ng-template" id="pages/home.html">
+      <h1>Home</h1>
+     
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page-Sonja</title>
+  </head>
+  <header>
+    <div><em><strong><h2>My  Details</h2></strong></em></div>
+    <hr size="1"noshade>
+    </header>
+    <br>
+<!--***************Form************-->
+
+  <body ng-app="myApp" ng-controller="HomeController">
+     <div>
+      <div style="background-image:url('look.jpg');" >
+      <form>
+        <table  cellspacing="30" align=center>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+         <tr>
+         <td><em><strong>Name:     </strong></em> </td>
+          <td><input type="text" name="name"  ng-model="name" ></td>
+         
+        </tr> 
+        <tr>
+        <td><em><strong>Roll No:   </strong></em> </td>
+
+        <td> <input type="number" name="rollno" ng-model="rollno" > </td>
+      </tr>
+      <tr>
+
+
+        <td><em><strong>Email :</strong></em> </td>
+        <td><input type="email" name="Email" ng-model="email" ></td>
+      </tr>
+      
+
+     <tr>
+        <br><br>
+       <!-- <td><input type="submit" name="Submit" style="background-color:#1f441e; border-radius:20px; color:white; outline:none; width:100px;" ></td> -->
+     
+
+     </tr>
+      </table>
+    </div>
+    </form>
+    <div>
+<hr size="2">
+
+  </body>
+</html>
+
+
+    </script>
+    <script type="text/ng-template" id="pages/register.html">
+      <h1>Register</h1>
+      
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form-Sonja</title>
+  </head>
+  <header>
+    <div><em><strong><h2>Register Your Details</h2></strong></em></div>
+    <hr size="1"noshade>
+    </header>
+    <br>
+<!--***************Form************-->
+
+  <body>
+    <div style="background-image:url('look1.jpg');" >
+      <br>
+      <br>
+      <br>
+      <h1 style="color:white; text-align:center;">Register here<h1>
+    </div>
+      <form >
+        <table cellspacing="30" align=center>
+          <tr>
+            <td><em><strong>Name:     </strong></em> </td>
+             <td><input type="text" name="name"  ng-model="name"  required></td>
+            
+           </tr> 
+          <tr>
+         <td><em><strong>First Semester Mark     </strong></em> </td>
+          <td><input type="number" name="first" placeholder="Enter your First Semester Mark " ng-model="first" required></td>
+        </tr>
+        <tr>
+        <td><em><strong>Second Semester Mark    </strong></em> </td>
+
+        <td> <input type="number" name="second"  placeholder="Enter your Second Semester Mark " ng-model="second" required> 
+        </td>
+      </tr>
+      <tr>
+
+
+        <td><em><strong>Third Semester Mark </strong></em> </td>
+        <td><input type="number" name="third" placeholder="Enter your Third Semester Mark "ng-model="third"  required></td>
+      </tr>
+      <tr>
+        <td><em><strong>Fourth Semester Mark </strong></em>      </td>
+        <td><input type="number" name="fourth" placeholder="Enter your Fourth Semester Mark " ng-model="fourth" required></td>
+      </tr>
+      <tr>
+        <td><em><strong>Aggregate Mark     </strong></em> </td>
+         <td>{{(first+second+third+fourth)/4}}</td>
+       </tr>
+       <tr>
+        <td><em><strong>Address: </strong></em>   </td>
+        <td><textarea name="Address" rows="6" cols="19" placeholder="Enter your Address"   required></textarea></td>
+      </tr>
+      <tr>
+        <td><em><strong>DOB: </strong></em>   </td>
+        <td><input type="date"name="dob"  placeholder="Enter your DOB" required></textarea></td>
+      </tr>
+      <tr>
+
+        <td><em><strong>Mobile No:</strong></em>    </td>
+        <td><input type="text" name="Mobile No" placeholder="Enter your Mobile Number" required></td>
+      </tr>
+      <tr>
+        <td><em><strong>Programming Languages Known</strong></em>   </td>
+        <td><textarea name="lang" rows="6" cols="19" placeholder="Enter known programming languages" required></textarea></td>
+      </tr>
+
+      <tr>
+        <td><em><strong>Extra-curricular activities</strong></em>   </td>
+        <td><textarea name="extra" rows="6" cols="19" placeholder="Enter your extra curricular activities"required></textarea></td>
+      </tr>
+      
+
+
+     <tr>
+        <br><br>
+       <td><input type="submit" name="Submit" style="background-color:#1f441e; border-radius:20px; color:white; outline:none; width:100px;" onclick="display_alert()" ></td>
+       <td><input type="reset" name="Reset" style="background-color:blue; border-radius:20px; color:white; outline:none; width:100px;" ></td>
+
+     </tr>
+      </table>
+
+    </form>
+    <div style="background-image:url('look1.jpg');" >
+      <br>
+      <br>
+    </div>
+  
+<br>
+<hr size>
+<script src="type/javascript">
+  function display_alert()
+  {
+    alert("data entered are submitted!!!");
+  }
+  </script>
+  </body>
+</html>
+    </script> 
+
+    
+
+    <div ng-view></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
